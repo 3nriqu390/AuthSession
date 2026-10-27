@@ -90,6 +90,25 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Microsoft.AspNetCore.Authentication.Negotiate/10.0.12": {
+        "type": "package",
+        "dependencies": {
+          "System.DirectoryServices.Protocols": "10.0.12"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.AspNetCore.Authentication.Negotiate.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.Authentication.Negotiate.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Authentication.OpenIdConnect/10.0.9": {
         "type": "package",
         "dependencies": {
@@ -462,6 +481,22 @@
           }
         }
       },
+      "Scalar.AspNetCore/2.18.2": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "System.ClientModel/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -475,6 +510,36 @@
         "runtime": {
           "lib/net6.0/System.ClientModel.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "System.DirectoryServices.Protocols/10.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/System.DirectoryServices.Protocols.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.DirectoryServices.Protocols.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/lib/net10.0/System.DirectoryServices.Protocols.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/net10.0/System.DirectoryServices.Protocols.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/win/lib/net10.0/System.DirectoryServices.Protocols.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
@@ -636,6 +701,22 @@
         "lib/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
         "microsoft.aspnetcore.authentication.jwtbearer.10.0.9.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Negotiate/10.0.12": {
+      "sha512": "VfOevKtT0kUW4xxUBpwNnHbOHB4BjI1Uf17pRbiLdMwzEQ2k7UU5fAXKFK32kKnvhcrI1zzRCanvtc23k/5y7w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.negotiate/10.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net10.0/Microsoft.AspNetCore.Authentication.Negotiate.dll",
+        "lib/net10.0/Microsoft.AspNetCore.Authentication.Negotiate.xml",
+        "microsoft.aspnetcore.authentication.negotiate.10.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.negotiate.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.OpenIdConnect/10.0.9": {
@@ -1138,6 +1219,25 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "Scalar.AspNetCore/2.18.2": {
+      "sha512": "/Ss5o3t+k+Ea5yRMxd5avukRCRB74YdWNZ+y7RNTjFtWqP10VNhl+ynQYyATC+vr65qB6sFcneQ4q2kExbc2+w==",
+      "type": "package",
+      "path": "scalar.aspnetcore/2.18.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net10.0/Scalar.AspNetCore.dll",
+        "lib/net10.0/Scalar.AspNetCore.xml",
+        "lib/net8.0/Scalar.AspNetCore.dll",
+        "lib/net8.0/Scalar.AspNetCore.xml",
+        "lib/net9.0/Scalar.AspNetCore.dll",
+        "lib/net9.0/Scalar.AspNetCore.xml",
+        "scalar.aspnetcore.2.18.2.nupkg.sha512",
+        "scalar.aspnetcore.nuspec"
+      ]
+    },
     "System.ClientModel/1.0.0": {
       "sha512": "I3CVkvxeqFYjIVEP59DnjbeoGNfo/+SZrCLpRz2v/g0gpCHaEMPtWSY0s9k/7jR1rAsLNg2z2u1JRB76tPjnIw==",
       "type": "package",
@@ -1154,6 +1254,50 @@
         "lib/netstandard2.0/System.ClientModel.xml",
         "system.clientmodel.1.0.0.nupkg.sha512",
         "system.clientmodel.nuspec"
+      ]
+    },
+    "System.DirectoryServices.Protocols/10.0.12": {
+      "sha512": "L2PHm7ewfjQYgbhBUB+lXiewxoNo+rhn06geWeUJP3qYCDnkL+Qibv6TEPMlMsF/zab4cU2bE8BWTBqzHZYiYg==",
+      "type": "package",
+      "path": "system.directoryservices.protocols/10.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.DirectoryServices.Protocols.targets",
+        "lib/net10.0/System.DirectoryServices.Protocols.dll",
+        "lib/net10.0/System.DirectoryServices.Protocols.xml",
+        "lib/net462/_._",
+        "lib/net8.0/System.DirectoryServices.Protocols.dll",
+        "lib/net8.0/System.DirectoryServices.Protocols.xml",
+        "lib/net9.0/System.DirectoryServices.Protocols.dll",
+        "lib/net9.0/System.DirectoryServices.Protocols.xml",
+        "lib/netstandard2.0/System.DirectoryServices.Protocols.dll",
+        "lib/netstandard2.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/linux/lib/net10.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/linux/lib/net10.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/linux/lib/net8.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/linux/lib/net8.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/linux/lib/net9.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/linux/lib/net9.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/osx/lib/net10.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/osx/lib/net10.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/osx/lib/net8.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/osx/lib/net8.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/osx/lib/net9.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/osx/lib/net9.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/win/lib/net10.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/win/lib/net10.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/win/lib/net8.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/win/lib/net8.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/win/lib/net9.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/win/lib/net9.0/System.DirectoryServices.Protocols.xml",
+        "system.directoryservices.protocols.10.0.12.nupkg.sha512",
+        "system.directoryservices.protocols.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.IdentityModel.Tokens.Jwt/8.14.0": {
@@ -1280,10 +1424,12 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.9",
+      "Microsoft.AspNetCore.Authentication.Negotiate >= 10.0.12",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 10.0.9",
       "Microsoft.AspNetCore.OpenApi >= 10.0.9",
       "Microsoft.Identity.Web >= 3.14.1",
-      "Microsoft.Identity.Web.DownstreamApi >= 3.14.1"
+      "Microsoft.Identity.Web.DownstreamApi >= 3.14.1",
+      "Scalar.AspNetCore >= 2.18.2"
     ]
   },
   "packageFolders": {
@@ -1345,6 +1491,10 @@
               "NU1605"
             ]
           },
+          "Microsoft.AspNetCore.Authentication.Negotiate": {
+            "target": "Package",
+            "version": "[10.0.12, )"
+          },
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
             "target": "Package",
             "version": "[10.0.9, )",
@@ -1363,6 +1513,10 @@
           "Microsoft.Identity.Web.DownstreamApi": {
             "target": "Package",
             "version": "[3.14.1, )"
+          },
+          "Scalar.AspNetCore": {
+            "target": "Package",
+            "version": "[2.18.2, )"
           }
         },
         "imports": [
@@ -1807,8 +1961,38 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNetCore.Authentication.Negotiate' 10.0.12 has a known high severity vulnerability, https://github.com/advisories/GHSA-vrrp-6v32-2p8g",
+      "libraryId": "Microsoft.AspNetCore.Authentication.Negotiate",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
       "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Security.Cryptography.Pkcs' 9.0.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-2fmv-rv2c-59x7",
+      "libraryId": "System.Security.Cryptography.Pkcs",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Security.Cryptography.Pkcs' 9.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-846f-f764-76mx",
+      "libraryId": "System.Security.Cryptography.Pkcs",
       "targetGraphs": [
         "net10.0"
       ]
