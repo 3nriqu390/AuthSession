@@ -14,6 +14,7 @@ sealed class AllowedIdAuthorizationHandler : AuthorizationHandler<AllowedIdRequi
             requirement.AllowedIds.Contains(id))
         {
             context.Succeed(requirement);
+            return;
         }
         
         context.Fail(new AuthorizationFailureReason(this, "Id is not allowed"));
