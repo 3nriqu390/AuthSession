@@ -67,3 +67,4 @@ C:\Users\tdpjdr\RiderProjects\AuthSession\AuthSession\obj\Debug\net10.0\refint\A
 C:\Users\tdpjdr\RiderProjects\AuthSession\AuthSession\obj\Debug\net10.0\AuthSession.pdb
 C:\Users\tdpjdr\RiderProjects\AuthSession\AuthSession\obj\Debug\net10.0\AuthSession.genruntimeconfig.cache
 C:\Users\tdpjdr\RiderProjects\AuthSession\AuthSession\obj\Debug\net10.0\ref\AuthSession.dll
+C:\Users\tdpjdr\RiderProjects\AuthSession\AuthSession\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
