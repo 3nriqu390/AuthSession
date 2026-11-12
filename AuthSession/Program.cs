@@ -13,11 +13,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddSingleton<IAuthorizationHandler, AgeAuthorizationHandler>();
 builder.Services.AddSingleton<IAuthorizationHandler, AllowedIdAuthorizationHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, BlackColorHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, WhiteColorHandler>();
 builder.Services.AddSingleton<IAuthorizationMiddlewareResultHandler, ForbiddenAuthorizationResultHandler>();
 
 var adminPolicy = new AuthorizationPolicyBuilder()
     .RequireAuthenticatedUser()
-    .RequireRole("admin", "reader")
+    .RequireRole("admin")
     .Build();
 
 builder.Services.AddAuthorization(options =>
@@ -32,12 +34,23 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("WeatherAdmin", policy =>
     {
         policy.RequireRole("admin");
+        
         policy.AddRequirements(new AllowedIdRequirement(1001, 1002, 2001));
     });
     
     options.AddPolicy("AgeRequirement", policy =>
     {
         policy.AddRequirements(new AgeRequirement());
+    });
+
+    options.AddPolicy("DressColorRequirement", policy =>
+    {
+        policy.AddRequirements(new DressColorRequirement());
+    });
+    
+    options.AddPolicy("EmployeeOnlyPolicy", policy =>
+    {
+        policy.RequireClaim("EmployeeNumber");
     });
 
 });
@@ -102,6 +115,10 @@ app.MapGet("/admin/{id:int}", (int id) =>
 
 app.MapGet("/otherEndpoint", () =>
     Results.Ok($"You are authorized to access the other endpoint."));
+
+app.MapGet("/colorEndpoint/{color}", (string color) =>
+    Results.Ok($"You are authorized to access the color endpoint for {color}."))
+    .RequireAuthorization("employeeOnlyPolicy");
 
 app.MapGet("/health", () => Results.Ok(new { status = "Healthy" }))
     .AllowAnonymous();

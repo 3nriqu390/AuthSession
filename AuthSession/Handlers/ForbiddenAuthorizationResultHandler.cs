@@ -19,7 +19,7 @@ sealed class ForbiddenAuthorizationResultHandler : IAuthorizationMiddlewareResul
             context.Response.StatusCode == StatusCodes.Status403Forbidden &&
             !context.Response.HasStarted)
         {
-            await context.Response.WriteAsJsonAsync(authorizeResult.AuthorizationFailure?.FailureReasons.FirstOrDefault()?.Message);
+            await context.Response.WriteAsJsonAsync(authorizeResult.AuthorizationFailure.FailedRequirements);
         }
     }
 }
